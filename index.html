@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>ARC DAY 2</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
@@ -25,8 +25,412 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-markdown>
+					<textarea data-template>
+						## JavaScript
+						### Apa sih JavaScript?
+					</textarea>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							![](images/htmlcssjs.png?raw=true)
+						</textarea>
+					</section>
+					<section>
+							<h2>Review materi kemarin</h2>
+							<ul>
+								<li class="fragment"> HTML: Kerangka dari tampilan</li>
+								<li class="fragment"> CSS : Design dari tampilan</li>
+								<li class="fragment"> JS  : <span class="fragment">??</span></li>
+							</ul>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## JavaScript
+							JavaScript atau disingkat JS itu bahasa yang bisa dijalanin di dalam browser. Jadi bisa ada *logic* di webpage kita
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Contoh penggunaan JavaScript
+							* Membuat website interaktif
+							* melakukan pengolahan data di website anda
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Membuat website interaktif
+							* Presentasi ini dibuat dengan html css dan js
+						</textarea>
+					</section>
+					<section>
+						<h2>melakukan pengolahan</h2>
+						a = <input id = "a"> <br>
+						b = <input id = "b"> <br>
+						<button id="c">
+							tambah
+						</button>
+						<script>
+							c = document.getElementById("c");
+							c.onclick = ()=>{
+								a = document.getElementById("a");
+								b = document.getElementById("b");
+								sum = Number(a.value)+Number(b.value);
+								alert(`${a.value} + ${b.value} = ${sum}`)
+							}
+						</script>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## Cara nambahin JavaScript
+							JavaScript bisa ditambahkan ke website kalian dengan menambahkan script tag
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Ada 2 cara untuk menyimpan JavaScript di website kalian
+							* Langsung di file HTML
+							* Disimpan file .js lain dan di import di HTML (recommended)
+						</textarea>
+					</section>
+					<section>
+						<h2>Langsung di file HTML</h2>
+						<textarea name="name" rows = "16" cols="80">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Web Title&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;!-- Website kalian --&gt;
+		&lt;script type=&quot;text/javascript&quot;&gt;
+			// ini sudah bisa JavaScript
+			var a = 1;
+			var b = 2;
+		&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+						</textarea>
+					</section>
+					<section>
+						<h2>Di file lain</h2>
+						<div style="display:flex; justify-content: center;">
+						<div style="display:flex;flex-direction: column;">
+						<button>index.html</button>
+						<textarea name="name" rows = "16" cols="80">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;Web Title&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;!-- Website kalian --&gt;
+		&lt;script type=&quot;text/javascript&quot; src=&quot;index.js&quot;&gt;&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+						</textarea>
+						</div>
+						<div style="display:flex;flex-direction: column;">
+						<button>index.js</button>
+						<textarea name="name" rows = "16" cols="40">
+var a = 1;
+var b = 2;
+						</textarea>
+						</div>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							# Basic JavaScript
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							# Variable
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Variable
+							* Ada 4 cara buat declare variable
+							1. var
+							2. langsung (kayak python)
+							3. const
+							4. let
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Variable
+							* Contoh pembuatan variable
+							```javascript
+							var message = "Hello World"
+							```
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Variable
+							* Ada beberapa tipe data yang bisa masuk ke variable
+							```javascript
+							// String
+							var message = "Hello World";
+							// Number
+							var number = 1;
+							var desimal = 0.1;
+							// Array
+							var arr = [1, 2, 3]
+							// Object
+							var obj = { key1: 1, key2: 2 }
+							```
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							# Operators
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Arithmatial Operators
+							```javascript
+							var x = 5, y = 10, z = 15;
+							// tambah
+							x + y; //returns 15
+							// kurang
+							y - x; //returns 5
+							// kali
+							x * y; //returns 50
+							// bagi
+							y / x; //returns 2
+							// mod
+							x % 2; //returns 1
+							// increment
+							x++; //returns 6
+							// decrement
+							x--; //returns 4
+							```
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Comparison Operators
+							```javascript
+							var a = 5, b = 10, c = "5";
+							// Tanpa melihat tipe data
+							a == c; // returns true
+							// Membandingkan tipe data
+							a === c; // returns false
+							// Tidak sama dengan
+							a != b; // returns true
+							a > b; // returns false
+							a < b; // returns true
+							a >= b; // returns false
+							a <= b; // returns true
+							a >= c; // returns true
+							a <= c; // returns true
+							```
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Logical Operators
+							```javascript
+							var a = 5, b = 10;
+							// && and
+							(a != b) && (a < b); // returns true
+							// || or
+							(a > b) || (a == b); // returns false
+							(a < b) || (a == b); // returns true
+							// ! not
+							!(a < b); // returns false
+							!(a > b); // returns true
+							```
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							# Conditionals and Loops
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## If
+							```javascript
+							if (condition) {
+								doSomethingIfTrue();
+							} else {
+								doSomethingIfFalse();
+							}
+							```
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## While
+							```javascript
+							while(condition){
+								doSomethingRepeatedlyWhileTrue();
+							}
+							```
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## For
+							```javascript
+							for (var i = 0; i &lt; 10; i++){
+								doSomethingWith(i);
+							}
+							```
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							# Function
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Function
+							```javascript
+							// Cara 1
+							function nama_fungsi(input_variable1, input_variable2) {
+								// proses
+								return output
+							}
+							// Cara 2
+							const nama_fungsi = (input_variable1, input_variable2) => {
+								//proses
+								return output
+							}
+							```
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							# Document Object Model
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Document Object Model
+							* Page yang kalian lihat itu sebuah object Document
+							* Semua element dari website ada di dalam object document ini
+							* Jadi object-object ini bisa di akses secara programmatik
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Document Object Model
+							* Sebenarnya banyak banget cara buat select element dari document, tapi biar sama kayak CSS, dipake querySelector
+							```javascript
+							// Syntax
+							var element = document.querySelector(selectorString)
+							// Contoh
+							var button = document.querySelector("button#submitform-1")
+							```
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Element
+							* Setelah menyimpan elementnya ke suatu variable, kita bisa melakukan banyak hal dengan element itu
+							* karena terlalu banyak, kalian lihat aja [di sini](https://developer.mozilla.org/en-US/docs/Web/API/Element#Methods)
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							# Event
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Event
+							* Event = Kejadian
+							* Jadi, event di javascript itu semua kejadian yang dilakukan oleh user
+							* Contoh: Ngetik, Menggerakan Mouse, Klik
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Event
+							* Sebenarnya banyak cara buat memroses event, tapi cara paling general pake addEventListener
+							```javascript
+							function proses_event(event){
+								// proses eventnya
+							}
+							var element = document.querySelector("button#submitform-1")
+							element.addEventListener("click", proses_event)
+							```
+							* buat list event bisa dilihat [di sini](https://developer.mozilla.org/en-US/docs/Web/Events)
+						</textarea>
+					</section>
+					<section>
+						<div style="display: flex;">
+							<div style="display: flex; flex-direction: column;">
+								<textarea name="name" rows="4" cols="80" id="input-1">&lt;p id=&quot;p&quot;&gt;Hello&lt;/p&gt;</textarea>
+								<textarea name="name" rows="16" cols="40" id="input-2" style="font-size:20px"></textarea>
+								<button type="button" id="run-1">RUN</button>
+							</div>
+							<iframe id="output-1"></iframe>
+						</div>
+						<script>
+						window.onload=function(){
+							const html= document.getElementById("input-1");
+							const js = document.getElementById("input-2")
+							const output = document.getElementById("output-1");
+							const button = document.getElementById("run-1");
+							var working = false;
+							fill = function(){
+								if (working) {
+									return false;
+								}
+								working = true;
+								var document = output.contentDocument;
+								const style = document.createElement("style");
+								style.innerHTML="body {background-color: white;}"
+								const script = document.createElement("script");
+								const script_helper = document.createElement("script");
+								script_helper.innerHTML = `
+								function print(text) {
+								  var p = document.getElementById("p");
+								  p.innerHTML = text;
+								}
+								`
+								script.innerHTML = js.value;
+								document.body.innerHTML = html.value;
+								document.body.appendChild(style);
+								document.body.appendChild(script);
+								document.body.appendChild(script_helper);
+								working = false;
+							}
+							fill()
+							button.onclick = fill
+						}
+						</script>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							# Git Version Control
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Git Version Control
+							* Git adalah .....
+						</textarea>
+					</section>
+				</section>
 			</div>
 		</div>
 
@@ -41,6 +445,7 @@
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true }
 				]
 			});
