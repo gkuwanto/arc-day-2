@@ -25,6 +25,9 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
+				<section>
+					<h1>bit.ly/ARCDAY2</h1>
+				</section>
 				<section data-markdown>
 					<textarea data-template>
 						## JavaScript
@@ -472,6 +475,99 @@ var b = 2;
 							`git commit -m "<Message Commit>"`
 							* harus dalam kutip kalo lebih dari 1 kata
 							* message ini membantu untuk keep track perubahan-perubahan yang kalian save. Jadi, idealnya kasih message yang berarti
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Git (lebih lanjut)
+							* Git ga cuman buat ngesave commitan
+							* Git juga bisa menyimpan berbagai versi dari project kalian
+							* Misal si A ngerjain fitur search dan si B ngerjain fitur login
+							* Jadi si A bisa ngerjain dan save kerjaannya di tempat yang berbeda sama si B
+							* Setelah semuanya selesai bisa di gabung
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Git Branch
+							* Fitur ini adalah fitur yang paling penting untuk kolaborasi
+							* jadi project kita bisa bercabang-cabang, trus habis cabang-cabang ini bisa di gabung (merge)
+							* buat check branch yang ada, gunakan command `git branch`
+							* buat bikin branch baru, `git checkout -b <nama_branch>`
+							* buat pindah ke branch yang udah ada `git checkout <nama_branch>` (bedanya di -b)
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Git Merge
+							* Git merge ini yang menggabung kan 2 branch yang berbeda
+							* Caranya adalah
+							1. Pindah ke branch yang ingin menerima perubahan (biasanya branch yang lebih tua)
+							2. ketik `git merge <nama_branch>`
+							3. Resolve conflict-conflict
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Git Merge
+							* Git merge ga terlalu pintar, jadi biasanya bakal ada conflict
+							* Conflict terjadi saat dua branch yang ingin di merge melakukan perubahan di file yang sama
+							* Resolvenya kita edit filenya, manual pake text editor
+							* setelah itu, `git add <nama_file_conflict>`
+							* Format Conflict
+							```
+							<<<<<<< HEAD
+							//code di base
+							=======
+							//code di branch baru
+							<<<<<<< NAMA_BRANCH_BARU
+							```
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Github
+							* Sekarang kalian buka github.com dan bikin project baru
+							* ikutin command-command yang ada di project kosong
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Github clone
+							* misalnya mau download dari github
+							* pake `git clone <link_dari_github>`
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Github Pull
+							* `git pull` akan melakukan merge dari branch yang ada di remote (github kalian) ke branch yang ada di local kalian (laptop)
+							* pull juga bisa terjadi conflict, cara reslovenya juga sama kayak merge (manual)
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Github Push
+							* `git push origin <nama_branch>` akan melakukan merge dari branch yang ada di local (laptop) ke branch yang ada di remote (github)
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## Tugas
+							* Buat project di github 1 per kelompok mentoring
+							* Buat webapp kalkulator pake html css js
+							* Idealnya setiap orang di grup kelompok berkontribusi
+							* 1 Fungsi 1 branch
+							* explore: host project di github pages
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Terima Kasih
+							### Contact: gkuwanto@arc.itb.ac.id
+							### Line: gkuwanto
 						</textarea>
 					</section>
 				</section>
