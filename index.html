@@ -66,8 +66,8 @@
 					</section>
 					<section>
 						<h2>melakukan pengolahan</h2>
-						a = <input id = "a"> <br>
-						b = <input id = "b"> <br>
+						<p>a = <input id = "a"> </p>
+						<p>b = <input id = "b"> </p>
 						<button id="c">
 							tambah
 						</button>
@@ -367,8 +367,8 @@ var b = 2;
 							function proses_event(event){
 								// proses eventnya
 							}
-							var element = document.querySelector("button#submitform-1")
-							element.addEventListener("click", proses_event)
+							var el = document.querySelector("button#submitform-1")
+							el.addEventListener("click", proses_event)
 							```
 							* buat list event bisa dilihat [di sini](https://developer.mozilla.org/en-US/docs/Web/Events)
 						</textarea>
@@ -421,13 +421,57 @@ var b = 2;
 				<section>
 					<section data-markdown>
 						<textarea data-template>
-							# Git Version Control
+							# Git
 						</textarea>
 					</section>
 					<section data-markdown>
 						<textarea data-template>
-							## Git Version Control
-							* Git adalah .....
+							## Git and Github
+							* Git tidak sama dengan github
+							* Git adalah sebuah *version control system*
+							* Version Control System (VCS) adalah system yang mencatat semua perubahan-perubahan dari sebuah project
+							* Sedangkan Github adalah sebuah website dimana kita bisa mengupload project git kita agar mudah untuk berkolaborasi di project tersebut
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Git (lebih dalam)
+							* Git tidak akan tau apa aja yang di catat kalo kita gak kasih tau
+							* Cara kasih tau? gampang... Misalnya kalian ingin git mencatat history dari project kalian di folder `project`
+							1. Buka `git bash` / `terminal`
+							2. Pergi ke folder `project`
+							3. Ketik `git init`
+							* Kalo mau cek git kalian, bisa pake `git status`
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Git (lebih dalam)
+							* Sekarang git akan mulai mencatat perubahan-perubahan yang ada di folder `project`
+							* Tapi sama seperti microsoft word, kalian perlu memberitahu git untuk save
+							* Di git, ada dua tahap untuk melakukan save perbuahan (namanya commit)
+							1. Staging
+							2. Commit
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Git Staging
+							* staging adalah tempat dimana file kalian sudah siap untuk di save, tapi belum di save
+							* Cara stage adalah `git add <nama file>`
+							* tapi kalo mau semua file yang ada di folder kalian ke stage pake `git add .` (titiknya penting)
+							* misalnya mau remove dari stage, kalian bisa pake `git restore --staged <file>` (--stage penting)
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Git Commit
+							* Sekarang perubahan-perubahannya udah ada di stage, tinggal kalian commit
+							* cara untuk commit yang di perubahan-perubahan yang sudah di stage.
+
+							`git commit -m "<Message Commit>"`
+							* harus dalam kutip kalo lebih dari 1 kata
+							* message ini membantu untuk keep track perubahan-perubahan yang kalian save. Jadi, idealnya kasih message yang berarti
 						</textarea>
 					</section>
 				</section>
